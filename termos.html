@@ -1,95 +1,408 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contaí — Controle financeiro pessoal</title>
-<meta name="description" content="Contaí: aplicativo de controle financeiro pessoal. Organize transações, cartões, categorias e relatórios do seu dia a dia.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termos de Uso e Política de Privacidade — Contaí</title>
+<meta name="description" content="Termos de Uso e Política de Privacidade do aplicativo Contaí, versão 1.2.0, conforme a LGPD (Lei nº 13.709/2018).">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root{
-    --bg:#F2F5F9; --surface:#FFFFFF; --border:#D8E0EB;
-    --text:#1F2937; --muted:#6B7A8D; --accent:#3B9EE8; --accent-soft:#E8F0F8;
+    color-scheme: light dark;
+    --primary:#1B6CA8;
+    --bg:#F2F5F9;
+    --surface:#FFFFFF;
+    --text:#0D1B2A;
+    --muted:#6B7A8D;
+    --border:#D8E0EB;
+    --chip-bg:#E8F0F8;
   }
   @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#0F1621; --surface:#172231; --border:#2A3647;
-      --text:#E8EDF2; --muted:#8A9AB0; --accent:#5BB2F0; --accent-soft:#1B2C3F;
+    :root{
+      --primary:#3B9EE8;
+      --bg:#0F1923;
+      --surface:#1A2535;
+      --text:#E8EDF2;
+      --muted:#8A9AB0;
+      --border:#2A3A50;
+      --chip-bg:#16283A;
     }
   }
-  :root[data-theme="dark"]{
-    --bg:#0F1621; --surface:#172231; --border:#2A3647;
-    --text:#E8EDF2; --muted:#8A9AB0; --accent:#5BB2F0; --accent-soft:#1B2C3F;
-  }
-  *{box-sizing:border-box}
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
   body{
-    margin:0; background:var(--bg); color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"IBM Plex Sans",-apple-system,Segoe UI,sans-serif;
+    line-height:1.6;
+    padding-inline:16px;
   }
-  .wrap{max-width:720px; margin:0 auto; padding:64px 16px 48px}
-  .logo{
-    width:56px; height:56px; border-radius:16px; background:var(--accent);
-    display:flex; align-items:center; justify-content:center;
-    color:#fff; font-weight:700; font-size:26px; letter-spacing:-.5px; margin-bottom:24px;
+  h1,h2{
+    font-family:"Newsreader","Iowan Old Style",Georgia,serif;
+    text-wrap:balance;
+    letter-spacing:-0.01em;
   }
-  h1{font-size:clamp(28px,6vw,40px); line-height:1.2; margin:0 0 12px; letter-spacing:-.02em}
-  .lead{font-size:clamp(16px,2.6vw,19px); color:var(--muted); margin:0 0 32px; max-width:52ch}
-  .card{
-    background:var(--surface); border:1px solid var(--border);
-    border-radius:14px; padding:24px; margin:0 0 20px;
+
+  header.doc-head{
+    max-width:960px;
+    margin:0 auto;
+    padding-block:32px 24px;
+    border-bottom:1px solid var(--border);
   }
-  h2{font-size:17px; margin:0 0 12px; letter-spacing:-.01em}
-  ul{margin:0; padding-left:20px; color:var(--muted)}
-  li{margin:6px 0}
-  .btn{
-    display:inline-block; background:var(--accent); color:#fff; text-decoration:none;
-    padding:12px 22px; border-radius:10px; font-weight:600; font-size:15px;
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
   }
-  .btn:hover{opacity:.9}
-  .links{margin-top:24px; display:flex; flex-wrap:wrap; gap:20px}
-  .links a{color:var(--accent); text-decoration:none; font-size:15px}
-  .links a:hover{text-decoration:underline}
+  .brand-mark{
+    width:32px;height:32px;border-radius:9px;
+    background:var(--primary);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--surface);
+    font-family:"Newsreader",serif;
+    font-weight:600;
+    font-size:17px;
+    flex-shrink:0;
+  }
+  .brand-name{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  h1{
+    font-size:clamp(28px,4.5vw,40px);
+    font-weight:600;
+    margin:0 0 16px;
+    color:var(--text);
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .chip{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;
+    padding:5px 10px;
+    border-radius:100px;
+    background:var(--chip-bg);
+    color:var(--primary);
+    border:1px solid var(--border);
+    white-space:nowrap;
+  }
+  .lede{
+    max-width:68ch;
+    color:var(--muted);
+    font-size:15px;
+    margin-top:18px;
+  }
+
+  .layout{
+    max-width:960px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:220px minmax(0,1fr);
+    gap:40px;
+    padding-block:32px 64px;
+    align-items:start;
+  }
+  nav.toc{
+    position:sticky;
+    top:24px;
+    font-size:13.5px;
+  }
+  nav.toc .toc-label{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:10px;
+  }
+  nav.toc ol{
+    list-style:none;
+    margin:0;padding:0;
+    display:flex;flex-direction:column;
+    gap:2px;
+    border-left:1px solid var(--border);
+  }
+  nav.toc a{
+    display:block;
+    padding:5px 0 5px 14px;
+    color:var(--muted);
+    text-decoration:none;
+    border-left:2px solid transparent;
+    margin-left:-1px;
+  }
+  nav.toc a:hover{color:var(--primary);border-left-color:var(--primary);}
+
+  details.toc-mobile{display:none;}
+
+  main{min-width:0;}
+  section{
+    padding-block:22px;
+    border-bottom:1px solid var(--border);
+    scroll-margin-top:20px;
+  }
+  section:last-of-type{border-bottom:none;}
+  section h2{
+    font-size:19px;
+    font-weight:600;
+    margin:0 0 10px;
+    display:flex;
+    gap:10px;
+    align-items:baseline;
+  }
+  section h2 .num{
+    font-family:"IBM Plex Mono",monospace;
+    color:var(--primary);
+    font-size:14px;
+    font-weight:500;
+  }
+  section p{
+    margin:0 0 12px;
+    color:var(--text);
+    max-width:68ch;
+  }
+  section p:last-child{margin-bottom:0;}
+  section strong{color:var(--text);}
+  section ul{
+    margin:0 0 12px;
+    padding-left:20px;
+    max-width:68ch;
+  }
+  section li{margin-bottom:4px;}
+  a.inline{color:var(--primary);}
+
+  .callout{
+    background:var(--chip-bg);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:16px 18px;
+    margin-top:6px;
+    max-width:68ch;
+    font-size:14px;
+    color:var(--muted);
+  }
+  .callout strong{color:var(--text);}
+
   footer{
-    margin-top:40px; padding-top:24px; border-top:1px solid var(--border);
-    color:var(--muted); font-size:14px;
+    max-width:960px;
+    margin:0 auto;
+    padding-block:28px 48px;
+    border-top:1px solid var(--border);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:16px;
+    font-size:13px;
+    color:var(--muted);
   }
-  footer a{color:var(--muted)}
+  footer a{color:var(--primary);}
+
+  @media (max-width:860px){
+    .layout{grid-template-columns:1fr;}
+    nav.toc.desktop{display:none;}
+    details.toc-mobile{
+      display:block;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:2px 16px;
+    }
+    details.toc-mobile summary{
+      padding-block:12px;
+      font-family:"IBM Plex Mono",monospace;
+      font-size:12px;
+      letter-spacing:0.06em;
+      text-transform:uppercase;
+      color:var(--primary);
+      cursor:pointer;
+    }
+    details.toc-mobile ol{
+      list-style:none;margin:0;padding:0 0 12px;
+      display:flex;flex-direction:column;gap:2px;
+    }
+    details.toc-mobile a{
+      display:block;padding:6px 0;color:var(--muted);text-decoration:none;
+      border-top:1px solid var(--border);
+    }
+  }
 </style>
 </head>
 <body>
-  <main class="wrap">
-    <div class="logo" aria-hidden="true">C</div>
-    <h1>Contaí</h1>
-    <p class="lead">Aplicativo de controle financeiro pessoal para Android. Registre transações, acompanhe cartões e categorias, e veja para onde o seu dinheiro está indo.</p>
 
-    <p><a class="btn" href="https://play.google.com/store/apps/details?id=finance.app">Baixar no Google Play</a></p>
+<header class="doc-head">
+  <div class="brand">
+    <div class="brand-mark">C</div>
+    <span class="brand-name">Contaí</span>
+  </div>
+  <h1>Termos de Uso e Política de Privacidade</h1>
+  <div class="meta-row">
+    <span class="chip">Versão 1.2.0</span>
+    <span class="chip">Atualizado em 12 de setembro de 2026</span>
+    <span class="chip">LGPD · Lei nº 13.709/2018</span>
+  </div>
+  <p class="lede">Este documento reúne os Termos de Uso e a Política de Privacidade do aplicativo Contaí, voltado ao controle financeiro pessoal. Ele é disponibilizado por José Lucas Costa dos Santos, pessoa física responsável pelo Aplicativo, na condição de Controlador dos dados para os fins da Lei Geral de Proteção de Dados Pessoais.</p>
+</header>
 
-    <div class="card" style="margin-top:36px">
-      <h2>O que o app faz</h2>
+<div class="layout">
+  <nav class="toc desktop" aria-label="Sumário">
+    <div class="toc-label">Sumário</div>
+    <ol>
+      <li><a href="#intro">1. Quem somos</a></li>
+      <li><a href="#descricao-servico">2. O que o app é</a></li>
+      <li><a href="#cadastro">3. Cadastro e conta</a></li>
+      <li><a href="#dados-coletados">4. Dados coletados</a></li>
+      <li><a href="#base-legal">5. Base legal</a></li>
+      <li><a href="#compartilhamento">6. Compartilhamento</a></li>
+      <li><a href="#retencao">7. Retenção</a></li>
+      <li><a href="#direitos">8. Seus direitos</a></li>
+      <li><a href="#exclusao-conta">9. Exclusão de conta</a></li>
+      <li><a href="#seguranca">10. Segurança</a></li>
+      <li><a href="#incidentes">11. Incidentes</a></li>
+      <li><a href="#menores">12. Menores</a></li>
+      <li><a href="#alteracoes">13. Alterações</a></li>
+      <li><a href="#foro">14. Foro</a></li>
+      <li><a href="#contato">15. Contato</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <details class="toc-mobile">
+      <summary>Sumário</summary>
+      <ol>
+        <li><a href="#intro">1. Quem somos</a></li>
+        <li><a href="#descricao-servico">2. O que o app é</a></li>
+        <li><a href="#cadastro">3. Cadastro e conta</a></li>
+        <li><a href="#dados-coletados">4. Dados coletados</a></li>
+        <li><a href="#base-legal">5. Base legal</a></li>
+        <li><a href="#compartilhamento">6. Compartilhamento</a></li>
+        <li><a href="#retencao">7. Retenção</a></li>
+        <li><a href="#direitos">8. Seus direitos</a></li>
+        <li><a href="#exclusao-conta">9. Exclusão de conta</a></li>
+        <li><a href="#seguranca">10. Segurança</a></li>
+        <li><a href="#incidentes">11. Incidentes</a></li>
+        <li><a href="#menores">12. Menores</a></li>
+        <li><a href="#alteracoes">13. Alterações</a></li>
+        <li><a href="#foro">14. Foro</a></li>
+        <li><a href="#contato">15. Contato</a></li>
+      </ol>
+    </details>
+
+    <section id="intro">
+      <h2><span class="num">01</span> Quem somos e o que este documento cobre</h2>
+      <p>Este documento reúne os Termos de Uso e a Política de Privacidade do aplicativo Contaí ("Aplicativo", "nós"), voltado ao controle financeiro pessoal. Ele é disponibilizado por <strong>José Lucas Costa dos Santos</strong>, pessoa física responsável pelo Aplicativo ("Controlador dos dados", para os fins da Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais, "LGPD").</p>
+      <p>Ao marcar a caixa "Li e aceito os Termos de Uso e a Política de Privacidade" e prosseguir com o cadastro ou login, você declara que leu, compreendeu e concorda integralmente com este documento. Se você não concordar com algum ponto, não deve criar conta nem fazer login — o Aplicativo pode continuar sendo usado sem conta, em modo local, sem envio de dados a servidores.</p>
+    </section>
+
+    <section id="descricao-servico">
+      <h2><span class="num">02</span> O que o Aplicativo é (e o que ele não é)</h2>
+      <p>O Contaí é uma ferramenta de organização financeira pessoal: permite registrar transações, contas, categorias, parcelamentos, metas e simulações inseridas manualmente pelo próprio usuário, com o objetivo de ajudar no planejamento e no controle do orçamento.</p>
+      <p>O Aplicativo <strong>não</strong> é uma instituição financeira, banco, correspondente bancário, meio de pagamento ou consultoria de investimentos. Ele não movimenta dinheiro real, não tem acesso a contas bancárias ou cartões reais do usuário (exceto quando o próprio usuário digita esses dados manualmente como anotação pessoal, o que é desaconselhado) e não oferece aconselhamento financeiro, contábil, tributário ou jurídico profissional. Decisões financeiras tomadas a partir de informações ou simulações do Aplicativo são de responsabilidade exclusiva do usuário.</p>
+      <p>A única movimentação financeira real processada é a cobrança da assinatura Premium (opcional), feita diretamente pelo Google Play (Google Play Billing) — o Aplicativo nunca recebe nem armazena número de cartão de crédito.</p>
+      <p>O Aplicativo também não é uma instituição autorizada a funcionar pelo Banco Central do Brasil, não estando sujeito às normas de segurança cibernética voltadas a instituições financeiras reguladas (como a Resolução CMN nº 4.658/2018 e as normas que a sucederam, incluindo BCB nº 538/2025 e CMN nº 5.274/2025). Ainda assim, seguimos práticas de segurança equivalentes às esperadas de um produto financeiro sério — ver Seção 10.</p>
+    </section>
+
+    <section id="cadastro">
+      <h2><span class="num">03</span> Cadastro, conta e responsabilidades do usuário</h2>
+      <p>O uso de recursos que dependem de sincronização e assinatura exige cadastro com nome, e-mail e senha (ou login via Google). O usuário é responsável por fornecer informações verdadeiras e por manter a confidencialidade de sua senha e do acesso ao aparelho onde o Aplicativo está instalado.</p>
+      <p>O Aplicativo é destinado a maiores de 18 (dezoito) anos ou a adolescentes com autorização e supervisão dos pais/responsáveis legais, observada a legislação aplicável (Estatuto da Criança e do Adolescente e art. 14 da LGPD). Não coletamos intencionalmente dados de crianças menores de 12 anos; se identificarmos cadastro nessas condições, a conta poderá ser suspensa e os dados eliminados.</p>
+      <p>Você pode encerrar sua conta a qualquer momento pelo próprio Aplicativo, em <strong>Ajustes → Zona de perigo → Excluir conta</strong>, conforme detalhado na Seção 9.</p>
+    </section>
+
+    <section id="dados-coletados">
+      <h2><span class="num">04</span> Quais dados pessoais coletamos e para quê</h2>
+      <p>Tratamos apenas os dados necessários para fornecer o serviço, seguindo o princípio da minimização (art. 6º, III, da LGPD). Eles se dividem em três grupos:</p>
+      <p><strong>4.1 Dados de cadastro:</strong> nome, e-mail e senha (a senha é gerenciada pelo Firebase Authentication com hashing seguro — nunca fica armazenada nem visível em texto puro para nós). Finalidade: criar e autenticar sua conta, permitir recuperação de senha e sincronizar seus dados entre aparelhos.</p>
+      <p><strong>4.2 Dados financeiros inseridos por você:</strong> transações, contas, categorias, parcelamentos, metas, orçamentos e demais lançamentos que você cadastra manualmente no Aplicativo. Finalidade: exibir seus relatórios, saldos, simulações e exportações (planilha por e-mail), e nada além disso — esses dados não são usados para publicidade nem vendidos a terceiros.</p>
+      <p><strong>4.3 Dados técnicos e de uso</strong>, coletados automaticamente para estabilidade e melhoria do produto: modelo e fabricante do aparelho, versão do sistema operacional, versão do Aplicativo, idioma, um identificador de instalação/análise gerado pelo próprio Aplicativo (não é seu nome, e-mail ou documento) e registros técnicos de erro (crash logs). Esses dados de análise <strong>não incluem</strong> nome, CPF, endereço, número de telefone, geolocalização precisa, dados bancários reais ou qualquer outro dado que, isoladamente, permita identificar diretamente a pessoa a partir desse conjunto — em conformidade com o princípio da minimização e da finalidade (art. 6º, I e III, da LGPD). Finalidade: identificar falhas, priorizar correções e entender, de forma agregada, como as telas do Aplicativo são usadas.</p>
+      <p>Se, no futuro, o Aplicativo passar a coletar dado adicional relevante, esta Política será atualizada previamente e, quando exigido por lei, um novo consentimento será solicitado.</p>
+    </section>
+
+    <section id="base-legal">
+      <h2><span class="num">05</span> Base legal do tratamento</h2>
+      <p>Tratamos seus dados com base em uma ou mais das hipóteses do art. 7º da LGPD, conforme a finalidade: (i) consentimento — ao aceitar este documento antes do login/cadastro; (ii) execução de contrato — para prestar o serviço que você solicitou (conta, sincronização, assinatura); (iii) cumprimento de obrigação legal ou regulatória — por exemplo, guarda de registros fiscais de pagamento quando aplicável; e (iv) legítimo interesse do Controlador — para prevenção a fraude e garantia da segurança do Aplicativo, sempre de forma proporcional e sem prejudicar seus direitos fundamentais.</p>
+      <p>Você pode revogar o consentimento a qualquer momento, sem prejuízo da licitude do tratamento realizado antes da revogação. Revogar o consentimento necessário à prestação do serviço pode significar o encerramento da conta.</p>
+    </section>
+
+    <section id="compartilhamento">
+      <h2><span class="num">06</span> Com quem compartilhamos dados</h2>
+      <p>Não vendemos seus dados pessoais. Compartilhamos dados apenas com operadores estritamente necessários à operação do Aplicativo, sempre limitados ao mínimo necessário para o serviço que prestam:</p>
       <ul>
-        <li>Registro de receitas e despesas do dia a dia</li>
-        <li>Controle de cartões de crédito e faturas</li>
-        <li>Categorias, metas e simulações</li>
-        <li>Relatórios mensais e exportação do extrato</li>
+        <li><strong>Firebase / Google Cloud</strong> (Google LLC) — autenticação de conta e infraestrutura de backend.</li>
+        <li><strong>Google Play</strong> (Google LLC) — processamento de pagamentos da assinatura Premium via Google Play Billing; o Aplicativo nunca vê nem armazena dados completos de cartão.</li>
+        <li><strong>Resend</strong> — envio dos e-mails que você solicita (ex.: planilha de extrato, redefinição de senha).</li>
+        <li>Provedores de hospedagem e infraestrutura em nuvem que armazenam o banco de dados do Aplicativo.</li>
       </ul>
-    </div>
+      <p>Esses operadores só podem usar os dados para prestar o serviço contratado por nós, sob obrigações contratuais de confidencialidade e segurança. Podemos também compartilhar dados quando exigido por lei, ordem judicial ou autoridade competente.</p>
+    </section>
 
-    <div class="card">
-      <h2>Suporte</h2>
-      <p style="margin:0; color:var(--muted)">
-        Dúvidas, problemas ou sugestões:
-        <a href="mailto:contai.app.financas@gmail.com" style="color:var(--accent)">contai.app.financas@gmail.com</a>
-      </p>
-    </div>
+    <section id="retencao">
+      <h2><span class="num">07</span> Armazenamento, retenção e eliminação</h2>
+      <p>Seus dados ficam armazenados enquanto sua conta estiver ativa. Ao excluir sua conta (Seção 9), seus dados pessoais e financeiros são apagados permanentemente do servidor, ressalvadas informações que a legislação exija manter por prazo determinado (por exemplo, registros de pagamento para fins fiscais/contábeis, dentro do prazo legal aplicável), hipótese em que ficam retidas apenas pelo tempo estritamente necessário e com acesso restrito, nos termos do art. 16 da LGPD.</p>
+      <p>Dados armazenados apenas localmente no seu aparelho (quando você usa o Aplicativo sem login) permanecem sob seu controle e são removidos ao desinstalar o Aplicativo ou ao usar a opção "Resetar conta" nos Ajustes.</p>
+      <p>Como provedor de aplicação de internet, também seguimos a Lei nº 12.965/2014 (Marco Civil da Internet) e o Decreto nº 8.771/2016: registros técnicos de acesso à aplicação (não confundir com seus dados financeiros) são mantidos, sob sigilo, em ambiente controlado e seguro, pelo prazo de 6 (seis) meses, e só são disponibilizados a terceiros mediante ordem judicial.</p>
+    </section>
 
-    <div class="links">
-      <a href="/termos.html">Termos de Uso</a>
-      <a href="/termos.html">Política de Privacidade</a>
-    </div>
+    <section id="direitos">
+      <h2><span class="num">08</span> Seus direitos como titular dos dados</h2>
+      <p>Nos termos do art. 18 da LGPD, você tem direito a: confirmação da existência de tratamento; acesso aos dados; correção de dados incompletos, inexatos ou desatualizados; anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade com a lei; portabilidade dos dados a outro fornecedor, observados os segredos comercial e industrial; eliminação dos dados tratados com base no seu consentimento; informação sobre entidades públicas e privadas com as quais compartilhamos dados; informação sobre a possibilidade de não fornecer consentimento e suas consequências; e revogação do consentimento.</p>
+      <p>Para exercer qualquer um desses direitos, use a opção "Excluir conta" descrita na Seção 9 (para eliminação) ou entre em contato pelo e-mail <a class="inline" href="mailto:contai.app.financas@gmail.com">contai.app.financas@gmail.com</a>. Responderemos dentro do prazo legal aplicável.</p>
+    </section>
 
-    <footer>
-      JLDataLab — desenvolvedor do Contaí
-    </footer>
+    <section id="exclusao-conta">
+      <h2><span class="num">09</span> Exclusão da conta — como funciona</h2>
+      <p>Em <strong>Ajustes → Zona de perigo → "Excluir conta"</strong>, você pode pedir, a qualquer momento e sem necessidade de justificativa, a exclusão definitiva da sua conta. Essa ação é diferente de "Resetar conta": resetar apaga apenas os lançamentos financeiros locais/sincronizados e mantém seu login; excluir conta encerra o seu cadastro por completo.</p>
+      <p>Ao confirmar a exclusão (é pedida confirmação em duas etapas, por se tratar de ação irreversível), o Aplicativo solicita ao servidor a remoção permanente da sua conta e de todos os dados associados a ela — cadastro, transações, contas, categorias, metas, dados de assinatura — e o cancelamento de qualquer assinatura Premium ativa antes da exclusão. Seu registro de autenticação também é removido, impedindo login futuro com as mesmas credenciais. Essa operação não pode ser desfeita.</p>
+      <p>Se você não tiver mais o Aplicativo instalado ou não conseguir acessar sua conta, também é possível solicitar a exclusão fora do app: escreva para <a class="inline" href="mailto:contai.app.financas@gmail.com">contai.app.financas@gmail.com</a> com o assunto "Excluir minha conta", informando o e-mail cadastrado. Essa via atende à exigência da Google Play de um canal de exclusão de conta acessível também fora do aplicativo, além do botão descrito acima.</p>
+    </section>
+
+    <section id="seguranca">
+      <h2><span class="num">10</span> Segurança da informação</h2>
+      <p>Adotamos medidas técnicas e administrativas para proteger seus dados contra acessos não autorizados e situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou difusão, incluindo: tráfego criptografado (HTTPS/TLS) entre o Aplicativo e o servidor; autenticação e hashing de senha delegados ao Firebase Authentication; controle de acesso por usuário autenticado em cada requisição ao servidor; e armazenamento seguro de credenciais no aparelho (Secure Store / Keychain / Keystore do sistema operacional).</p>
+      <p>Nossas práticas de engenharia seguem, como referência, o OWASP Mobile Application Security Verification Standard (MASVS) — que cobre interação segura com a plataforma, resiliência a engenharia reversa e controles de privacidade em apps móveis.</p>
+      <p>Quanto a pagamentos, a assinatura Premium é vendida e cobrada inteiramente pelo Google Play (Google Play Billing): o Aplicativo nunca recebe, vê ou armazena dados de cartão — toda a etapa de pagamento acontece na interface e na infraestrutura do próprio Google, fora do Aplicativo. Isso praticamente elimina o escopo de conformidade PCI DSS que recairia sobre nós.</p>
+      <p>Nenhum sistema é 100% infalível. Caso ocorra um incidente de segurança que possa acarretar risco relevante a você, agimos conforme descrito na Seção 11.</p>
+    </section>
+
+    <section id="incidentes">
+      <h2><span class="num">11</span> Comunicação de incidentes de segurança</h2>
+      <p>Em caso de incidente de segurança que possa acarretar risco ou dano relevante aos titulares, comunicaremos a Autoridade Nacional de Proteção de Dados (ANPD) e os titulares afetados no prazo de 3 (três) dias úteis a partir da ciência do incidente, nos termos do Regulamento de Comunicação de Incidente de Segurança (Resolução CD/ANPD nº 15/2024) — informando a natureza dos dados afetados, as medidas técnicas adotadas e as orientações para a proteção dos seus interesses.</p>
+    </section>
+
+    <section id="menores">
+      <h2><span class="num">12</span> Menores de idade</h2>
+      <p>O Aplicativo não é direcionado a crianças. O tratamento de dados de adolescentes observa o melhor interesse do titular e, quando aplicável, exige consentimento específico de ao menos um dos pais ou responsável legal, nos termos do art. 14 da LGPD.</p>
+    </section>
+
+    <section id="alteracoes">
+      <h2><span class="num">13</span> Alterações neste documento</h2>
+      <p>Podemos atualizar estes Termos e esta Política periodicamente. Mudanças materiais serão comunicadas dentro do Aplicativo, e um novo aceite poderá ser solicitado antes do próximo login. A versão vigente é a <strong>1.2.0</strong>, atualizada em <strong>12 de setembro de 2026</strong>.</p>
+    </section>
+
+    <section id="foro">
+      <h2><span class="num">14</span> Legislação aplicável e foro</h2>
+      <p>Este documento é regido pelas leis da República Federativa do Brasil, em especial a Lei nº 13.709/2018 (LGPD), a Lei nº 12.965/2014 (Marco Civil da Internet) e a Lei nº 8.078/1990 (Código de Defesa do Consumidor). Fica eleito o foro do domicílio do usuário para dirimir eventuais controvérsias, salvo disposição legal em contrário.</p>
+      <p>Este Controlador pode se enquadrar como agente de tratamento de pequeno porte, nos termos da Resolução CD/ANPD nº 2/2022, o que autoriza prazos diferenciados (em geral, em dobro) para responder a algumas solicitações de titulares e para comunicar incidentes de segurança — sem prejuízo do cumprimento das demais obrigações substantivas da LGPD.</p>
+    </section>
+
+    <section id="contato">
+      <h2><span class="num">15</span> Contato</h2>
+      <p>Dúvidas, solicitações relativas a dados pessoais ou exercício de direitos podem ser enviadas para <a class="inline" href="mailto:contai.app.financas@gmail.com">contai.app.financas@gmail.com</a>.</p>
+      <div class="callout"><strong>Responsável pelo tratamento de dados:</strong> José Lucas Costa dos Santos, pessoa física, Brasil.</div>
+    </section>
   </main>
+</div>
+
+<footer>
+  <span>Contaí — controle financeiro pessoal</span>
+  <span>Contato: <a href="mailto:contai.app.financas@gmail.com">contai.app.financas@gmail.com</a></span>
+</footer>
+
 </body>
 </html>
